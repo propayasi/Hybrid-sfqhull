@@ -28,7 +28,7 @@ The goal is to evaluate and compare performance at scale, while exploring differ
 
 ## 📁 Project Structure
 
-```bash
+```plaintext
 pcp_final/
 │
 ├── heaphull.cu         # CUDA implementation of HeapHull
@@ -42,6 +42,9 @@ pcp_final/
 │
 ├── results.txt         # Benchmark results (runtime comparisons)
 └── readme.txt          # (Legacy README - superseded by this file)
+```
+
+---
 
 ## 🚀 Getting Started
 
@@ -53,32 +56,89 @@ pcp_final/
 - Python 3.x (for input generation, if needed)
 - `numpy` and `matplotlib` for `input_gen.ipynb`
 
+---
+
 ### 🔧 Build Instructions
 
-You  Contributing
-Pull requests are welcome!
-If you have improvements, new algorithms, or suggestions, feel free to open an issue or a PR.
-
-📜 License
-Distributed under the MIT License.
-See LICENSE for more information.
-
-✨ Acknowledgements
-Classical algorithms based on standard computational geometry literature
-
-CUDA parallelization inspired by NVIDIA research paperscan compile individual `.cu` files using `nvcc`:
+You can compile individual `.cu` files using `nvcc`:
 
 ```bash
 nvcc quickhull.cu -o quickhull
 nvcc heaphull.cu -o heaphull
 nvcc quickheaphull.cu -o quickheaphull
 nvcc incremental.cu -o incremental
+```
 
-Or compile and run everything automatically:
+Or compile and run everything automatically using:
+
+```bash
 ./run_all.bat
-(Make sure the .bat file paths match your local environment setup.)
+```
 
-Results
-Benchmark results are recorded in results.txt.p
+> ⚡ Make sure the `.bat` file paths match your local environment setup.
 
+---
+
+### 🏃‍♂️ Run Instructions
+
+After building, simply execute:
+
+```bash
+./quickhull
+./heaphull
+./quickheaphull
+./incremental
+```
+
+Input data can be auto-generated or provided manually.
+
+---
+
+## 📊 Results
+
+Benchmark results are recorded in [`results.txt`](./results.txt).
+
+Key findings include:
+
+| Algorithm        | Runtime (ms) | Notes                    |
+| ---------------- | ------------ | ------------------------ |
+| QuickHull        | XXX          | Baseline                 |
+| HeapHull         | XXX          | Improved load balancing  |
+| QuickHeapHull    | XXX          | Best hybrid performance  |
+| Incremental      | XXX          | High variance at scale   |
+
+> 📈 *Exact runtime values are available inside the `results.txt` file.*
+
+---
+
+## 📊 Future Work
+
+- Extend to 3D convex hulls
+- Experiment with shared memory optimizations
+- Adaptive load balancing during recursion
+- Visualization of the resulting convex hulls
+- Profiling with Nsight and optimizing warp divergence
+
+---
+
+## 🤝 Contributing
+
+Pull requests are welcome!  
+If you have improvements, new algorithms, or suggestions, feel free to open an issue or a PR.
+
+---
+
+## 📜 License
+
+Distributed under the MIT License.  
+See `LICENSE` for more information.
+
+---
+
+## ✨ Acknowledgements
+
+- Classical algorithms based on standard computational geometry literature
+- CUDA parallelization inspired by NVIDIA research papers
+
+---
 
