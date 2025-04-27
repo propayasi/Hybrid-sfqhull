@@ -1,0 +1,160 @@
+===== CONVEX HULL BENCHMARK RESULTS =====
+-------------------------------------- 
+Processing: scan.cu in folder scan 
+ 
+========= RUNNING scan ========= 
+ 
+Read 1000000 points from input.txt
+
+========== THREADS: 2 ==========
+Convex Hull contains 25 points.
+Time taken: 0.368043 seconds
+
+========== THREADS: 4 ==========
+Convex Hull contains 25 points.
+Time taken: 0.171247 seconds
+
+========== THREADS: 8 ==========
+Convex Hull contains 25 points.
+Time taken: 0.169839 seconds
+
+========== THREADS: 16 ==========
+Convex Hull contains 25 points.
+Time taken: 0.16801 seconds
+
+========== THREADS: 32 ==========
+Convex Hull contains 25 points.
+Time taken: 0.168158 seconds
+
+========== THREADS: 64 ==========
+Convex Hull contains 25 points.
+Time taken: 0.169821 seconds
+
+Done.
+-------------------------------------- 
+Processing: heaphull.cu in folder heaphull 
+ 
+========= RUNNING heaphull ========= 
+ 
+Read 1000000 points from input.txt
+Filtering complete: 1000000 points retained after compaction.
+
+========== THREADS: 2 ==========
+Convex Hull contains 25 points.
+Time taken: 0.328165 seconds
+
+========== THREADS: 4 ==========
+Convex Hull contains 25 points.
+Time taken: 0.142493 seconds
+
+========== THREADS: 8 ==========
+Convex Hull contains 25 points.
+Time taken: 0.143748 seconds
+
+========== THREADS: 16 ==========
+Convex Hull contains 25 points.
+Time taken: 0.143835 seconds
+
+========== THREADS: 32 ==========
+Convex Hull contains 25 points.
+Time taken: 0.143125 seconds
+
+========== THREADS: 64 ==========
+Convex Hull contains 25 points.
+Time taken: 0.144918 seconds
+
+Done.
+-------------------------------------- 
+Processing: incremental.cu in folder incremental 
+ 
+========= RUNNING incremental ========= 
+ 
+Read points from input.txt
+
+========== THREADS: 2 ==========
+Convex Hull contains 36 points.
+Time taken: 0.408415 seconds
+
+========== THREADS: 4 ==========
+Convex Hull contains 36 points.
+Time taken: 0.41272 seconds
+
+========== THREADS: 8 ==========
+Convex Hull contains 36 points.
+Time taken: 0.412698 seconds
+
+========== THREADS: 16 ==========
+Convex Hull contains 36 points.
+Time taken: 0.409218 seconds
+
+========== THREADS: 32 ==========
+Convex Hull contains 36 points.
+Time taken: 0.411735 seconds
+
+========== THREADS: 64 ==========
+Convex Hull contains 36 points.
+Time taken: 0.410319 seconds
+Done.
+-------------------------------------- 
+Processing: quickheaphull.cu in folder quickheaphull 
+ 
+========= RUNNING quickheaphull ========= 
+ 
+
+========= RUNNING quickheaphull =========
+
+Read 1000000 points from input.txt
+
+========== THREADS: 2 ==========
+Convex Hull contains 85 points.
+Time taken: 0.029733 seconds
+
+========== THREADS: 4 ==========
+Convex Hull contains 85 points.
+Time taken: 0.026967 seconds
+
+========== THREADS: 8 ==========
+Convex Hull contains 74 points.
+Time taken: 0.026374 seconds
+
+========== THREADS: 16 ==========
+Convex Hull contains 75 points.
+Time taken: 0.029534 seconds
+
+========== THREADS: 32 ==========
+Convex Hull contains 84 points.
+Time taken: 0.032016 seconds
+
+========== THREADS: 64 ==========
+Convex Hull contains 82 points.
+Time taken: 0.027424 seconds
+Done.
+
+-------------------------------------- 
+Processing: quickhull.cu in folder quickhull 
+ 
+========= RUNNING quickhull ========= 
+ 
+========= RUNNING quickhull =========
+Read 1000000 points from input.txt
+========== THREADS: 2 ==========
+Convex Hull contains 53 points.
+Time taken: 0.274649 seconds
+========== THREADS: 4 ==========
+Convex Hull contains 44 points.
+Time taken: 0.162661 seconds
+========== THREADS: 8 ==========
+Convex Hull contains 55 points.
+Time taken: 0.174308 seconds
+========== THREADS: 16 ==========
+Convex Hull contains 60 points.
+Time taken: 0.166213 seconds
+========== THREADS: 32 ==========
+Convex Hull contains 88 points.
+Time taken: 0.189721 seconds
+========== THREADS: 64 ==========
+Convex Hull contains 65 points.
+Time taken: 0.172575 seconds
+Done.
+ 
+DONE AT: 23-04-2025   0:49:59.95 
