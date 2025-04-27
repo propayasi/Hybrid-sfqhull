@@ -5,7 +5,7 @@
 ## ✨ Overview
 
 This project implements and benchmarks various **convex hull algorithms** using **CUDA C++**, designed for parallel execution on GPUs.  
-The included algorithms range from classical approaches like **QuickHull** to novel hybrid optimizations like **HeapHull** and **QuickHeapHull**.
+The included algorithms range from classical approaches like **QuickHull** to novel hybrid optimizations like **HeapHull** and **Hybrid-sfqhull**.
 
 The goal is to evaluate and compare performance at scale, while exploring different strategies for parallelizing geometric algorithms.
 
@@ -16,7 +16,7 @@ The goal is to evaluate and compare performance at scale, while exploring differ
 - CUDA implementations of:
   - **QuickHull**
   - **HeapHull**
-  - **QuickHeapHull**
+  - **HYBRID-sfqHull**
   - **Incremental Convex Hull**
   - **Parallel Scan Techniques**
 - Synthetic data generation using Python (`input_gen.ipynb`)
@@ -34,7 +34,7 @@ pcp_final/
 ├── heaphull.cu         # CUDA implementation of HeapHull
 ├── incremental.cu      # Incremental convex hull algorithm
 ├── quickhull.cu        # Standard QuickHull algorithm
-├── quickheaphull.cu    # Hybrid QuickHeapHull approach
+├── Hybrid-sfqhull.cu    # Hybrid Hybrid-sfqhull approach
 ├── scan.cu             # Parallel scan (prefix sum) utilities
 │
 ├── input_gen.ipynb     # Jupyter Notebook to generate synthetic inputs
@@ -65,7 +65,7 @@ You can compile individual `.cu` files using `nvcc`:
 ```bash
 nvcc quickhull.cu -o quickhull
 nvcc heaphull.cu -o heaphull
-nvcc quickheaphull.cu -o quickheaphull
+nvcc Hybrid-sfqhull.cu -o Hybrid-sfqhull
 nvcc incremental.cu -o incremental
 ```
 
@@ -86,7 +86,7 @@ After building, simply execute:
 ```bash
 ./quickhull
 ./heaphull
-./quickheaphull
+./Hybrid-sfqhull
 ./incremental
 ```
 
@@ -104,7 +104,7 @@ Key findings include:
 | ---------------- | ------------ | ------------------------ |
 | QuickHull        | XXX          | Baseline                 |
 | HeapHull         | XXX          | Improved load balancing  |
-| QuickHeapHull    | XXX          | Best hybrid performance  |
+| Hybrid-sfqhull    | XXX          | Best hybrid performance  |
 | Incremental      | XXX          | High variance at scale   |
 
 > 📈 *Exact runtime values are available inside the `results.txt` file.*
